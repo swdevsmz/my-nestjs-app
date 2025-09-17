@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UserController } from './user.controller';
+
 /**
  * @ModuleはNestJSのデコレーターで、このクラスがモジュールであることを示します。
  * モジュール内で利用するコントローラーやプロバイダーなどをまとめて管理します。
@@ -9,7 +11,7 @@ import { AppService } from './app.service';
   // 他のモジュールをインポートする場合はここに追加します
   imports: [],
   // このモジュールで利用するコントローラーを指定します
-  controllers: [AppController],
+  controllers: [AppController, UserController],
   // このモジュールで利用するプロバイダー（サービスなど）を指定します
   providers: [AppService],
 })

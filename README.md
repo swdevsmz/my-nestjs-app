@@ -14,6 +14,21 @@ npm install -g @nestjs/cli
 nest new my-nestjs-app
 ```
 
+## Additional Libraries
+
+### Zod (TypeScript用バリデーションライブラリ)
+
+ZodはTypeScript向けのスキーマバリデーションライブラリです。
+インストール:
+
+```bash
+npm install zod
+```
+
+公式ドキュメント: [https://zod.dev/](https://zod.dev/)
+
+---
+
 ## Project setup
 
 ```bash
@@ -44,6 +59,12 @@ npm run test:e2e
 
 # test coverage
 npm run test:cov
+```
+
+## Test
+
+```bash
+curl -X POST http://localhost:3000/user -H "Content-Type: application/json" -d '{"password": "John Doe", "email": "john.doe@example.com"}'
 ```
 
 ## Deployment
